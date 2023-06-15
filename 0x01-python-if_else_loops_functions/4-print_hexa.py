@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
-for j in range(0, 99):
-    print("{0:d} = 0x{0:}".format(j))
+for num in range(0, 99):
+    print("{} = 0x{:x}".format(num, num))
