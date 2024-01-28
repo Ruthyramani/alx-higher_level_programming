@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-"""import the math function"""
+'''
+    Implements a magic class
+'''
 import math
-""" create a class"""
 
 
 class MagicClass:
-    
-
+    '''
+        A class that implements special calculations
+    '''
     def __init__(self, radius=0):
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
@@ -14,8 +16,13 @@ class MagicClass:
         self.__radius = radius
 
     def area(self):
-        """again with the docstring"""
+        '''
+            calculate the area and returns it
+        '''
         return self.__radius ** 2 * math.pi
 
     def circumference(self):
+        '''
+            returns the circumference
+        '''
         return 2 * math.pi * self.__radius
