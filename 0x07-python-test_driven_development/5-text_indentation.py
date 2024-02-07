@@ -1,24 +1,30 @@
 #!/usr/bin/python3
+'''
+    This module contains the function for the `text_indentation`
 
-"""
-this module supplies a function, text_indentatiom(text).
-"""
+'''
+
 
 def text_indentation(text):
-    """splits a text into lines along "?", ":", "." followed by 2 new lines"""
-    if type(text) is not str:
-        raise TypeError("text must be a string")
-    flag = 0
-    for a in text:
-        if flag == 0:
-            if a == ' ':
+    '''
+        Indents text after '.', '?', or ':'
+
+        Args:
+            text - contains the string of text
+    '''
+    if not isinstance(text, str):
+        raise TypeError('text must be a string')
+
+    if (len(text) == 1 and text[0] == ' '):
+        print(text[0], end='')
+        return
+
+    for i in range(len(text)):
+        if i > 0 and text[i - 1] in ['.', '?', ':']:
+            while text[i] in ['\t', ' ', '\n']:
+                i += 1
+            if text[i - 1] in ['\t', ' ', '\n']:
                 continue
-            else:
-                flag = 1
-        if flag == 1:
-            if a == '?' or a == '.' or a == ':':
-                print(a)
-                print()
-                flag = 0
-            else:
-                print(a, end="")
+        print(text[i], end='')
+        if text[i] in ['.', '?', ':']:
+            print('\n')
