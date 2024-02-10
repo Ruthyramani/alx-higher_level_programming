@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''
-    print the last name passed
+    This module contains a function `say_my_name` that
+    prints the name passed as argument
 
 '''
 

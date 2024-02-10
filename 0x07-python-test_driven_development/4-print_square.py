@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-print a  square
+Module of function `print_square()` that prints a square
 Using '#' character
 '''
 

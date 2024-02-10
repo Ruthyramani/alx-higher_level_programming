@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-    This module contains the function for the `text_indentation`
+    This module contains the function `text_indentation`
 
 '''
 
